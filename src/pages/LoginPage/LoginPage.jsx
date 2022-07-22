@@ -4,12 +4,26 @@ import { useState } from "react";
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Visibility from '@mui/icons-material/Visibility';
 import Header from "../../components/Header/Header.jsx";
+import { login } from "../../services/axios.js";
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [token, setToken] = useState('');
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    const userData = {username, password}
+    setToken(login({ userData, setToken }));
+    localStorage.setItem("token", JSON.stringify(token));
+    localStorage.setItem('username', JSON.stringify(username));
+    if (token){
+      navigate("/catalog");
+    }
+  }
 
   const handleOnChangeUsername = (data) => {
     setUsername(data.target.value)
@@ -92,8 +106,8 @@ const LoginPage = () => {
           )} */}
             </FormControl>
           </Box>
-          <Button type="submit" variant="contained" sx={{}}>
-            Log In
+          <Button type="submit" variant="contained" sx={{}} onClick={handleOnClick}>
+            Acceder
           </Button>
         </Box>
       </Box>
