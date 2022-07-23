@@ -5,14 +5,18 @@ const styles = {
     margin: "50px",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    borderRadius: "4px",
   },
-  /* description: {
-    whiteSpace: "nowrap",
-    textOverflow: "ellipsis",
-    overflow: "hidden",
-    width: "300px",
-  }, */
+  button: {
+    margin: "0 auto",
+    marginBottom: "10px",
+    backgroundColor: "#9c27b0",
+    '&:hover': {
+      color: 'white',
+      backgroundColor: '#7d178f',
+    },
+  },
 };
 
 export default styles;

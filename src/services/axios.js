@@ -1,18 +1,25 @@
 import axios from "axios";
 
-export const login = async ({ userData, setToken }) => {
+export const login = async ({ userData, setToken, setError }) => {
   const res = await axios
     .post('https://fakestoreapi.com/auth/login', userData)
     .then((res) => res.data)
-    /* .catch((err) => {
-      if (err.response.status === 403) {
-        setError(true);
-      }
-    }); */
-    setToken(res.token);
+    .catch((err) => {
+      console.log("error")
 
+      if (err.response.status === 401) {
+        setError(true);
+        console.log("error")
+      }
+    });
+    setToken(res.token);
+    localStorage.setItem("token", JSON.stringify(res.token));
+    localStorage.setItem('username', JSON.stringify(userData.username));
+        
     console.log(res)
     console.log(res.token)
+
+    return res;
 };
 
 export const fetchData = async ({ setProducts }) => {

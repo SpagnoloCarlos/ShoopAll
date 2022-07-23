@@ -1,48 +1,69 @@
-import { Box, Typography, FormControl, InputLabel, OutlinedInput, Button, CssBaseline, IconButton, InputAdornment } from "@mui/material";
-import styles from './styles.js';
+import {
+  Box,
+  Typography,
+  FormControl,
+  InputLabel,
+  OutlinedInput,
+  Button,
+  IconButton,
+  InputAdornment,
+  FormHelperText,
+} from "@mui/material";
+import styles from "./styles.js";
 import { useState } from "react";
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import Visibility from "@mui/icons-material/Visibility";
 import Header from "../../components/Header/Header.jsx";
 import { login } from "../../services/axios.js";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Footer from "../../components/Footer/Footer.jsx";
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState("");
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
-  const handleOnClick = () => {
-    const userData = {username, password}
-    setToken(login({ userData, setToken }));
-    localStorage.setItem("token", JSON.stringify(token));
-    localStorage.setItem('username', JSON.stringify(username));
-    if (token){
-      navigate("/catalog");
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("token"));
+    if (token) {
+      return navigate("/catalog");
     }
-  }
+  }, []);
+
+  const handleOnClick = async () => {
+    const userData = { username, password };
+    if (username && password) {
+      const response = await login({ userData, setToken, setError });
+      if (response) {
+        navigate("/catalog");
+      }
+    } else {
+      setError(true)
+    }
+  };
 
   const handleOnChangeUsername = (data) => {
-    setUsername(data.target.value)
+    setUsername(data.target.value);
     setError(false);
-  }
+  };
   const handleOnChangePassword = (data) => {
-    setPassword(data.target.value)
-  }
+    setPassword(data.target.value);
+    setError(false);
+  };
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
   return (
     <>
-      <Header/>
+      <Header />
       <Box sx={styles.container}>
-        {/* <CssBaseline /> */}
         <Box sx={styles.box}>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" sx={{fontFamily: "Source Sans Pro"}}>
             Iniciar Sesion
           </Typography>
           <Box sx={styles.forms}>
@@ -50,13 +71,12 @@ const LoginPage = () => {
               sx={styles.form_username}
               variant="outlined"
               required
-              fullWidth
             >
-              <InputLabel htmlFor="username-component" /* error={error} */>
+              <InputLabel htmlFor="username-component" error={error}>
                 Usuario
               </InputLabel>
               <OutlinedInput
-                /* error={error} */
+                error={error}
                 id="username-component"
                 name="username"
                 value={username}
@@ -72,15 +92,12 @@ const LoginPage = () => {
               sx={styles.form_password}
               variant="outlined"
               required
-              fullWidth
             >
-              <InputLabel
-                htmlFor="password-component-password" /* error={error} */
-              >
+              <InputLabel htmlFor="password-component-password" error={error}>
                 Contraseña
               </InputLabel>
               <OutlinedInput
-                /* error={error} */
+                error={error}
                 id="password-component"
                 name="password"
                 type={showPassword ? "text" : "password"}
@@ -99,20 +116,26 @@ const LoginPage = () => {
                 }
                 label="Password"
               />
-              {/* {error && (
-            <FormHelperText id="password-component-error-text" error>
-              Username or password invalid.
-            </FormHelperText>
-          )} */}
+              {error && (
+                <FormHelperText id="password-component-error-text" error>
+                  Username or password invalid.
+                </FormHelperText>
+              )}
             </FormControl>
           </Box>
-          <Button type="submit" variant="contained" sx={{}} onClick={handleOnClick}>
+          <Button
+            type="submit"
+            variant="contained"
+            sx={styles.button}
+            onClick={handleOnClick}
+          >
             Acceder
           </Button>
         </Box>
       </Box>
+      <Footer  />
     </>
   );
-}
- 
+};
+
 export default LoginPage;

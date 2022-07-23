@@ -4,7 +4,7 @@ const styles = {
     flexWrap: "wrap",
     justifyContent: 'center',
     alignItems: "center",
-    margin: "50px",
+    margin: "20px",
   },
   pagination: {
     display: "flex",

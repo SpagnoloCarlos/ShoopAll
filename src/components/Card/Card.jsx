@@ -12,13 +12,13 @@ const ProductCard = (props) => {
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    localStorage.setItem('id', JSON.stringify(props.id));
-    // navigate("/product");
+    localStorage.setItem("id", JSON.stringify(props.id));
   }
 
   return (
     <Card sx={styles.card_container}>
       <CardMedia
+        sx={styles.card_image}
         component="img"
         alt="image"
         height="50%"
@@ -33,7 +33,7 @@ const ProductCard = (props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={() => {
+        <Button sx={styles.button} variant="contained" size="small" onClick={() => {
             handleOnClick()
             navigate(`/product/${props.id}`)
           }} >Más Información</Button>
