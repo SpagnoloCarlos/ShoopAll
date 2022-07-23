@@ -8,12 +8,10 @@ const styles = {
   container: {
     display: "flex",
     justifyContent: "center",
-    // flexWrap: "wrap",
     alignItems: "center",
     margin: "50px 50px 20px 50px",
     width: "1000px",
     height: "600px",
-    // border: "solid 1px black",
     borderRadius: "20px",
     backgroundColor: "#ffffff",
     boxShadow: "0 1px 2px 0 rgb(0 0 0 / 25%)",

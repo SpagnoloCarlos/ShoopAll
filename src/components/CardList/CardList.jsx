@@ -39,28 +39,29 @@ const CardList = () => {
   return (
     <>
       <Box sx={styles.container}>
-        {products.length !== 0 && productsGroups.length > 0 ? productsGroups[page-1].map((product, index) => 
-          <Card 
-            key={index}
-            id={product.id}
-            image= {product.image}
-            price= {product.price}
-            title= {product.title}
-            description={product.description}
-            rating={product.rating}
-          />) :
-          <Box sx={styles.box}>
-          </Box>
-        }
+        {products.length !== 0 && productsGroups.length > 0 ? (
+          productsGroups[page - 1].map((product, index) => (
+            <Card
+              key={index}
+              id={product.id}
+              image={product.image}
+              price={product.price}
+              title={product.title}
+              description={product.description}
+              rating={product.rating}
+            />
+          ))
+        ) : (
+          <Box sx={styles.box} />
+        )}
       </Box>
       <Pagination
         page={page}
         count={maxPage}
-        color='secondary'
+        color="secondary"
         onChange={(event, value) => {
           handleChange(value);
           window.scrollTo(0, 0);
-
         }}
         sx={styles.pagination}
       />

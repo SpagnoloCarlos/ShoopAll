@@ -1,9 +1,9 @@
 import CardList from "../../components/CardList/CardList";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Typography } from "@mui/material";
-import Footer from "../../components/Footer/Footer";
 import styles from "./styles";
 
 const Products = () => {
