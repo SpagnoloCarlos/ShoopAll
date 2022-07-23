@@ -1,5 +1,5 @@
 import LoginPage from "./pages/LoginPage/LoginPage";
-import Products from "./pages/Products/Products";
+import Products from "./pages/Catalog/Catalog";
 import { Routes, Route } from "react-router-dom";
 import ProductInformation from "./pages/ProductInformation/ProductInformation";
 import "./App.css"

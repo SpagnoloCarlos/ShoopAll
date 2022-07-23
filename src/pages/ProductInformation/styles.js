@@ -16,7 +16,7 @@ const styles = {
     // border: "solid 1px black",
     borderRadius: "20px",
     backgroundColor: "#ffffff",
-    boxShadow: "0 1px 2px 0 rgb(0 0 0 / 25%)"
+    boxShadow: "0 1px 2px 0 rgb(0 0 0 / 25%)",
   },
   box_information: {
     display: "flex",
@@ -38,6 +38,15 @@ const styles = {
     maxWidth: "80%",
     maxHeight: "95%",
   },
+  rating: {
+    display: "flex",
+    alignItems: "center",
+    marginTop: "20px",
+  },
+  icon: {
+    color: "yellow",
+    marginLeft: "5px",
+  },
   price: {
     margin: "20px 0 20px 0",
     color: "#00a650",
@@ -47,9 +56,9 @@ const styles = {
   },
   button: {
     backgroundColor: "#9c27b0",
-    '&:hover': {
-      color: 'white',
-      backgroundColor: '#7d178f',
+    "&:hover": {
+      color: "white",
+      backgroundColor: "#7d178f",
     },
   },
 };

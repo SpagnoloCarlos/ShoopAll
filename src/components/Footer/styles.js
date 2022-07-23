@@ -6,6 +6,12 @@ const styles = {
     marginTop: "20px",
     position: "relative",
     bottom: 0,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  typography: {
+    color: "white",
   },
 }
 

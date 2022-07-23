@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Typography } from "@mui/material";
 import Footer from "../../components/Footer/Footer";
+import styles from "./styles";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -13,12 +14,13 @@ const Products = () => {
     if (!token){
        return navigate("/");
     }
+    localStorage.removeItem('id');
   },[]);
 
   return (
     <>
       <Header />
-      <Typography sx={{fontFamily: "Permanent Marker", fontSize: "80px", textAlign: "center", marginTop: "20px", color: "#0F0F0F"}}>Catalogo</Typography>
+      <Typography sx={styles.typography}>Catalog</Typography>
       <CardList />
       <Footer />
     </>

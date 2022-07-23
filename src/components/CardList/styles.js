@@ -10,9 +10,6 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     marginBottom: "20px",
-    /* '& .MuiPaginationItem-root': {
-      color: 'white',
-    }, */
   },
 }
 

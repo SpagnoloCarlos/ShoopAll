@@ -1,10 +1,5 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import {Card,CardActions,CardContent,CardMedia,Button,Typography} from "@mui/material";
 import styles from './styles';
 import { useNavigate } from 'react-router-dom';
 
@@ -36,7 +31,7 @@ const ProductCard = (props) => {
         <Button sx={styles.button} variant="contained" size="small" onClick={() => {
             handleOnClick()
             navigate(`/product/${props.id}`)
-          }} >Más Información</Button>
+          }} >More Information</Button>
       </CardActions>
     </Card>
   );

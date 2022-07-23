@@ -63,17 +63,13 @@ const LoginPage = () => {
       <Header />
       <Box sx={styles.container}>
         <Box sx={styles.box}>
-          <Typography component="h1" variant="h5" sx={{fontFamily: "Source Sans Pro"}}>
-            Iniciar Sesion
+          <Typography component="h1" variant="h5" sx={styles.login}>
+            Login
           </Typography>
           <Box sx={styles.forms}>
-            <FormControl
-              sx={styles.form_username}
-              variant="outlined"
-              required
-            >
+            <FormControl sx={styles.form_username} variant="outlined" required>
               <InputLabel htmlFor="username-component" error={error}>
-                Usuario
+                Username
               </InputLabel>
               <OutlinedInput
                 error={error}
@@ -88,13 +84,9 @@ const LoginPage = () => {
                 }}
               />
             </FormControl>
-            <FormControl
-              sx={styles.form_password}
-              variant="outlined"
-              required
-            >
+            <FormControl sx={styles.form_password} variant="outlined" required>
               <InputLabel htmlFor="password-component-password" error={error}>
-                Contraseña
+                Password
               </InputLabel>
               <OutlinedInput
                 error={error}
@@ -129,11 +121,11 @@ const LoginPage = () => {
             sx={styles.button}
             onClick={handleOnClick}
           >
-            Acceder
+            Login
           </Button>
         </Box>
       </Box>
-      <Footer  />
+      <Footer />
     </>
   );
 };

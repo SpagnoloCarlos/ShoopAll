@@ -12,9 +12,9 @@ const styles = {
     margin: "0 auto",
     marginBottom: "10px",
     backgroundColor: "#9c27b0",
-    '&:hover': {
-      color: 'white',
-      backgroundColor: '#7d178f',
+    "&:hover": {
+      color: "white",
+      backgroundColor: "#7d178f",
     },
   },
 };

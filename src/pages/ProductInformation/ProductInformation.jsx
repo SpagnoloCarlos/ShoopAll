@@ -24,7 +24,9 @@ const ProductInformation = () => {
     fetchProductData({id, setProductData});
   }, []);
 
-  console.log(productData)
+  const handleOnClick = () => {
+    navigate("/catalog");
+  }
 
   return (
     <>
@@ -41,14 +43,14 @@ const ProductInformation = () => {
           </Box>
           <Box sx={styles.box_information}>
             <Typography variant="h5">{productData.title}</Typography>
-            {productData.rating !== undefined ? 
-              <Box sx={{display: "flex", alignItems: "center",   marginTop: "20px"}}>
+            {productData.rating !== undefined ? (
+              <Box sx={styles.rating}>
                 <Typography variant="h6">{productData.rating.rate}</Typography>
-                <StarIcon sx={{color:"yellow", marginLeft: "5px"}}></StarIcon>
+                <StarIcon sx={styles.icon}></StarIcon>
               </Box>
-                : 
+            ) : (
               <></>
-            }
+            )}
             <Typography sx={styles.price} variant="h4">
               {"$ " + productData.price}
             </Typography>
@@ -57,7 +59,9 @@ const ProductInformation = () => {
             </Box>
           </Box>
         </Box>
-        <Button sx={styles.button} variant="contained" onClick={() => navigate("/catalog")}>Volver</Button>
+        <Button sx={styles.button} variant="contained" onClick={handleOnClick}>
+          Back
+        </Button>
       </Box>
       <Footer />
     </>
