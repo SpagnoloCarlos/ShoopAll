@@ -21,7 +21,7 @@ const Products = () => {
   return (
     <>
       <Header />
-      <Typography sx={styles.typography}>Catalog</Typography>
+      <Typography sx={styles.typography}>Product Catalog</Typography>
       <CardList />
       <Footer />
     </>
