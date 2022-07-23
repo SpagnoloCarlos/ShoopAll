@@ -7,7 +7,7 @@ const styles = {
     height: "calc((100vh - 97px) - 100px)",
   },
   box: {
-    height: "300px",
+    height: "320px",
     width: "380px",
     margin: "20px",
     backgroundColor: "#ffffff",
@@ -21,6 +21,7 @@ const styles = {
   },
   icon: {
     marginTop: "20px",
+    backgroundColor: "#BC96E6",
   }, 
   typography_login: {
     fontFamily: "Source Sans Pro",
@@ -41,6 +42,10 @@ const styles = {
   form_password: {
     m: 1,
     width: "80%",
+  },
+  error: {
+    height: "10px",
+    marginTop: "5px",
   },
   button: {
     backgroundColor: "#9c27b0",

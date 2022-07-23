@@ -1,31 +1,31 @@
-import CardList from "../../components/CardList/CardList";
 import Header from "../../components/Header/Header";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import { Typography } from "@mui/material";
 import Footer from "../../components/Footer/Footer";
+import { Box, Typography } from "@mui/material";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./styles";
 
-const Products = () => {
+const NotFound = () => {
   const navigate = useNavigate();
-
+  
   useEffect(() => {
-    window.scrollTo(0, 0);
     const token = JSON.parse(localStorage.getItem('token'));
     if (!token){
        return navigate("/");
     }
-    localStorage.removeItem('id');
   },[]);
 
   return (
     <>
       <Header />
-      <Typography sx={styles.typography}>Catalog</Typography>
-      <CardList />
+      <Box sx={styles.container}>
+        <Typography sx={styles.typography}>
+          Page not found
+        </Typography>
+      </Box>
       <Footer />
     </>
   );
 }
  
-export default Products;
+export default NotFound;

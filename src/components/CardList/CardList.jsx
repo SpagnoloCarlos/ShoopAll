@@ -49,8 +49,8 @@ const CardList = () => {
             description={product.description}
             rating={product.rating}
           />) :
-          <>
-          </>
+          <Box sx={styles.box}>
+          </Box>
         }
       </Box>
       <Pagination
@@ -59,6 +59,8 @@ const CardList = () => {
         color='secondary'
         onChange={(event, value) => {
           handleChange(value);
+          window.scrollTo(0, 0);
+
         }}
         sx={styles.pagination}
       />

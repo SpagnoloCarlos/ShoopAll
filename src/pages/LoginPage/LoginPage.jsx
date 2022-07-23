@@ -113,11 +113,11 @@ const LoginPage = () => {
                 }
                 label="Password"
               />
-              {error && (
-                <FormHelperText id="password-component-error-text" error>
+              {error ? (
+                <FormHelperText sx={styles.error} id="password-component-error-text" error>
                   Username or password invalid.
                 </FormHelperText>
-              )}
+              ) : <Box sx={styles.error}></Box>}
             </FormControl>
           </Box>
           <Button

@@ -8,6 +8,9 @@ const styles = {
   },
   box: {
     display: "flex",
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
   typography_shop: {
     color: "white",

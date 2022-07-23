@@ -6,6 +6,9 @@ const styles = {
     alignItems: "center",
     margin: "20px",
   },
+  box: {
+    height: "calc((100vh - 97px) - 100px)",
+  },
   pagination: {
     display: "flex",
     justifyContent: "center",
