@@ -8,11 +8,13 @@ import {
   IconButton,
   InputAdornment,
   FormHelperText,
+  Avatar,
 } from "@mui/material";
 import styles from "./styles.js";
 import { useState } from "react";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Visibility from "@mui/icons-material/Visibility";
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Header from "../../components/Header/Header.jsx";
 import { login } from "../../services/axios.js";
 import { useNavigate } from "react-router-dom";
@@ -63,7 +65,10 @@ const LoginPage = () => {
       <Header />
       <Box sx={styles.container}>
         <Box sx={styles.box}>
-          <Typography component="h1" variant="h5" sx={styles.login}>
+        <Avatar sx={styles.icon}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5" sx={styles.typography_login}>
             Login
           </Typography>
           <Box sx={styles.forms}>

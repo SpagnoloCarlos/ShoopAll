@@ -19,15 +19,19 @@ const styles = {
     justifyContent: "center",
     p: 5,
   },
+  icon: {
+    marginTop: "20px",
+  }, 
   typography_login: {
     fontFamily: "Source Sans Pro",
+    marginTop: "10px",
   },
   forms: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "50px",
-    marginBottom: "50px",
+    marginTop: "30px",
+    marginBottom: "30px",
     width: "100%",
   },
   form_username: {
