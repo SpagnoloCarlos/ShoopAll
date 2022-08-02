@@ -30,7 +30,7 @@ const ProductInformation = () => {
       <Header />
       <Box sx={styles.box_page}>
         <Box sx={styles.container}>
-          { Object.entries(productData).length !== 0 ?
+          {Object.entries(productData).length !== 0 ? (
             <>
               <Box sx={styles.box_image}>
                 <CardMedia
@@ -42,14 +42,16 @@ const ProductInformation = () => {
               </Box>
               <Box sx={styles.box_information}>
                 <Typography variant="h5">{productData.title}</Typography>
-                
-                  <Box sx={styles.rating}>
-                    <Typography variant="h6">
-                      {productData.rating.rate}
-                    </Typography>
-                    <StarIcon sx={styles.icon}></StarIcon>
-                  </Box>
-                
+                <Typography sx={{marginTop: "20px"}}>
+                  {"CATEGORY: " + productData.category.toUpperCase()}
+                </Typography>
+                <Box sx={styles.rating}>
+                  <Typography variant="h6">
+                    {productData.rating.rate}
+                  </Typography>
+                  <StarIcon sx={styles.icon}></StarIcon>
+                </Box>
+
                 <Typography sx={styles.price} variant="h4">
                   {"$ " + productData.price}
                 </Typography>
@@ -57,8 +59,10 @@ const ProductInformation = () => {
                   <Typography>{productData.description}</Typography>
                 </Box>
               </Box>
-            </> : <></>
-          }
+            </>
+          ) : (
+            <></>
+          )}
         </Box>
         <Button sx={styles.button} variant="contained" onClick={handleOnClick}>
           Back

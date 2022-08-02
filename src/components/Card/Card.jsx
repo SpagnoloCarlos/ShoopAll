@@ -13,7 +13,7 @@ const ProductCard = (props) => {
   return (
     <Card sx={styles.card_container}>
       <CardMedia
-        sx={styles.card_image}
+        // sx={styles.card_image}
         component="img"
         alt="image"
         height="50%"

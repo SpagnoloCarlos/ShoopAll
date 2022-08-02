@@ -21,9 +21,9 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
 
-const LoginPage = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+const LoginPage = ({setIsLogged}) => {
+  const [username, setUsername] = useState("mor_2314");
+  const [password, setPassword] = useState("83r5^_");
   const [showPassword, setShowPassword] = useState(false);
   const [token, setToken] = useState("");
   const [error, setError] = useState(false);

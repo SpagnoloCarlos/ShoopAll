@@ -11,7 +11,7 @@ const styles = {
     alignItems: "center",
     margin: "50px 50px 20px 50px",
     width: "1000px",
-    height: "600px",
+    height: "650px",
     borderRadius: "20px",
     backgroundColor: "#ffffff",
     boxShadow: "0 1px 2px 0 rgb(0 0 0 / 25%)",

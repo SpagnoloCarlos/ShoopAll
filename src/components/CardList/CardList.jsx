@@ -1,18 +1,24 @@
 import { Box, Pagination } from "@mui/material";
 import { useState, useEffect } from "react";
-import { fetchData } from "../../services/axios";
+import { fetchData, fetchCategory } from "../../services/axios";
 import Card from '../Card/Card';
 import styles from "./styles";
 
-const CardList = () => {
+const CardList = (props) => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
   const [productsGroups, setProductsGroups] = useState([[1]]);
 
   useEffect(() => {
-    setProducts(fetchData({setProducts}));
-  }, [])
+    const a = props.a.a;
+    console.log(a);
+    if (a) {
+      setProducts(fetchCategory(a, { setProducts }));
+    } else {
+      setProducts(fetchData({ setProducts }));
+    }
+  }, [props.a.a]);
 
   useEffect(() => {
     const splitArrayIntoSubArrays = () => {
@@ -61,7 +67,6 @@ const CardList = () => {
         color="secondary"
         onChange={(event, value) => {
           handleChange(value);
-          window.scrollTo(0, 0);
         }}
         sx={styles.pagination}
       />
