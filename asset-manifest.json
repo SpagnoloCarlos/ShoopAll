@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shopall/static/css/main.cfde806b.css",
+    "main.js": "/shopall/static/js/main.67453514.js",
+    "static/js/787.3c5950d3.chunk.js": "/shopall/static/js/787.3c5950d3.chunk.js",
+    "index.html": "/shopall/index.html",
+    "main.cfde806b.css.map": "/shopall/static/css/main.cfde806b.css.map",
+    "main.67453514.js.map": "/shopall/static/js/main.67453514.js.map",
+    "787.3c5950d3.chunk.js.map": "/shopall/static/js/787.3c5950d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfde806b.css",
+    "static/js/main.67453514.js"
+  ]
+}
