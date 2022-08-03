@@ -20,9 +20,9 @@ const styles = {
     marginTop: "40px",
     marginLeft: "30px",
     color: "#7d178f",
-    "&:hover":{
-      backgroundColor: "#2d2e2e1f"
-    }
+    "&:hover": {
+      backgroundColor: "#2d2e2e1f",
+    },
   },
 };
 

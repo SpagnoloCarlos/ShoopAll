@@ -11,14 +11,14 @@ import Slideshow from "../../components/Slide/Slide";
 const Products = () => {
   const navigate = useNavigate();
 
-  const [a, setA] = useState("");
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const token = JSON.parse(localStorage.getItem('token'));
 
     if (!token){
-       return navigate("/");
+       return navigate("/shopall/login");
     }
     localStorage.removeItem('id');
   },[]);
@@ -28,8 +28,8 @@ const Products = () => {
       <Header />
       <Slideshow />
       <Typography sx={styles.typography}>Categories</Typography>
-      <CardCategory a={{ a, setA }} />
-      {a ? (
+      <CardCategory filter={{ category, setCategory }} />
+      {category ? (
         <Box
           sx={{
             display: "flex",
@@ -37,12 +37,12 @@ const Products = () => {
             alignItems: "center",
           }}
         >
-          {a === "jewelery" ? (
+          {category === "jewelery" ? (
             <Typography sx={styles.typography_all}>jewelry</Typography>
           ) : (
-            <Typography sx={styles.typography_all}>{a}</Typography>
+            <Typography sx={styles.typography_all}>{category}</Typography>
           )}
-          <Button onClick={() => setA("")} sx={styles.button}>
+          <Button onClick={() => setCategory("")} sx={styles.button}>
             Back
           </Button>
         </Box>
@@ -50,7 +50,7 @@ const Products = () => {
         <Typography sx={styles.typography}>All Products</Typography>
       )}
 
-      <CardList a={{ a }} />
+      <CardList filter={{ category }} />
       <Footer />
     </>
   );

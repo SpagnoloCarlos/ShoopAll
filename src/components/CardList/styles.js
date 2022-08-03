@@ -2,7 +2,7 @@ const styles = {
   container: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: 'center',
+    justifyContent: "center",
     alignItems: "center",
     margin: "20px",
   },
@@ -14,6 +14,6 @@ const styles = {
     justifyContent: "center",
     marginBottom: "20px",
   },
-}
+};
 
 export default styles;

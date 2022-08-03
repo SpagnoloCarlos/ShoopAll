@@ -21,16 +21,12 @@ const styles = {
   },
   card: {
     overflow: "hidden",
-    // width: "100%",
-    // height: "100%",
-    // padding: "10px",
   },
   typography: {
     position: "absolute",
     top: "45%",
     left: "0%",
     textAlign: "center",
-    backgroundColor: "white",
     paddingBottom: "10px",
     paddingTop: "10px",
     fontFamily: "'Anton', sans-serif",

@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import React from 'react';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
@@ -34,13 +33,10 @@ const Slideshow = () => {
         {fadeImages.map((fadeImage, index) => (
           <div className="each-fade" key={index}>
             <div className="image-container">
-              <img src={fadeImage.url} style={{ width: "100%" }} />
+              <img src={fadeImage.url} style={styles.image} />
             </div>
             <div style={styles[`text${index}`]}>
               <h1 style={styles[`title${index}`]}>{fadeImage.caption}</h1>
-              {/* <h2 style={styles[`description${index}`]}>
-                {fadeImage.description}
-              </h2> */}
             </div>
           </div>
         ))}

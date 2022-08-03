@@ -11,14 +11,13 @@ const CardList = (props) => {
   const [productsGroups, setProductsGroups] = useState([[1]]);
 
   useEffect(() => {
-    const a = props.a.a;
-    console.log(a);
-    if (a) {
-      setProducts(fetchCategory(a, { setProducts }));
+    const filter = props.filter.category;
+    if (filter) {
+      setProducts(fetchCategory(filter, { setProducts }));
     } else {
       setProducts(fetchData({ setProducts }));
     }
-  }, [props.a.a]);
+  }, [props.filter.category]);
 
   useEffect(() => {
     const splitArrayIntoSubArrays = () => {

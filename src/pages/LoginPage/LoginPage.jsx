@@ -21,7 +21,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
 
-const LoginPage = ({setIsLogged}) => {
+const LoginPage = () => {
   const [username, setUsername] = useState("mor_2314");
   const [password, setPassword] = useState("83r5^_");
   const [showPassword, setShowPassword] = useState(false);
@@ -32,7 +32,7 @@ const LoginPage = ({setIsLogged}) => {
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("token"));
     if (token) {
-      return navigate("/catalog");
+      return navigate("/shopall/catalog");
     }
   }, []);
 
@@ -41,10 +41,10 @@ const LoginPage = ({setIsLogged}) => {
     if (username && password) {
       const response = await login({ userData, setToken, setError });
       if (response) {
-        navigate("/catalog");
+        navigate("/shopall/catalog");
       }
     } else {
-      setError(true)
+      setError(true);
     }
   };
 
@@ -65,7 +65,7 @@ const LoginPage = ({setIsLogged}) => {
       <Header />
       <Box sx={styles.container}>
         <Box sx={styles.box}>
-        <Avatar sx={styles.icon}>
+          <Avatar sx={styles.icon}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5" sx={styles.typography_login}>
@@ -114,10 +114,16 @@ const LoginPage = ({setIsLogged}) => {
                 label="Password"
               />
               {error ? (
-                <FormHelperText sx={styles.error} id="password-component-error-text" error>
+                <FormHelperText
+                  sx={styles.error}
+                  id="password-component-error-text"
+                  error
+                >
                   Username or password invalid.
                 </FormHelperText>
-              ) : <Box sx={styles.error}></Box>}
+              ) : (
+                <Box sx={styles.error}></Box>
+              )}
             </FormControl>
           </Box>
           <Button

@@ -17,7 +17,7 @@ const Header = () => {
     localStorage.removeItem('username');
     localStorage.removeItem('id');
     setUsername("");
-    navigate("/");
+    navigate("/shopall/login");
     window.location.reload();
   }
 

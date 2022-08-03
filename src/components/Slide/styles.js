@@ -6,7 +6,6 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    // textShadow: "text-shadow: 2px 2px 5px rgba(255, 57, 88, 0.65)",
   },
   text1: {
     position: "absolute",
@@ -38,7 +37,6 @@ const styles = {
     fontFamily: "Mochiy Pop One",
     fontSize: "50px",
     textShadow: "2px 2px 5px rgba(255, 57, 88, 0.65)",
-
   },
   title1: {
     margin: 0,
@@ -61,32 +59,9 @@ const styles = {
     fontSize: "60px",
     textShadow: "2px 2px 5px rgba(228,231,236, 0.8)",
   },
-  description0: {
-    
-    color: "white",
-    fontFamily: "Mochiy Pop One",
-    fontSize: "20px",
-    textShadow: "2px 2px 5px rgba(255, 57, 88, 0.65)",
+  image: {
+    width: "100%",
   },
-  description1: {
-    color: "white",
-    fontFamily: "Mochiy Pop One",
-    fontSize: "20px",
-    textShadow: "2px 2px 5px rgba(16, 11, 12, 0.65)",
-  },
-  description2: {
-    color: "white",
-    fontFamily: "Mochiy Pop One",
-    fontSize: "20px",
-    textShadow: "2px 2px 5px rgba(16, 11, 12, 0.65)",
-  },
-  description3: {
-    color: "#2D2E2E",
-    fontFamily: "Mochiy Pop One",
-    fontSize: "20px",
-    textAlign: "center",
-    textShadow: "2px 2px 5px rgba(228,231,236, 0.8)",
-  },
-}
+};
 
 export default styles;

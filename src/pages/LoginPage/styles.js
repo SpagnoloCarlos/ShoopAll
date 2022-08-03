@@ -22,7 +22,7 @@ const styles = {
   icon: {
     marginTop: "20px",
     backgroundColor: "#BC96E6",
-  }, 
+  },
   typography_login: {
     fontFamily: "Source Sans Pro",
     marginTop: "10px",

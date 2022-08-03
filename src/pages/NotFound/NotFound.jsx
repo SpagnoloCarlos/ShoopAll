@@ -11,7 +11,7 @@ const NotFound = () => {
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem('token'));
     if (!token){
-       return navigate("/");
+       return navigate("/shopall/login");
     }
   },[]);
 
