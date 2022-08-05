@@ -8,7 +8,7 @@ const styles = {
   },
   container: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-around",
     flexWrap: "wrap",
     alignItems: "center",
     margin: "50px 50px 20px 50px",
