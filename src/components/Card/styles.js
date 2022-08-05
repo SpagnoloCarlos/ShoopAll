@@ -1,8 +1,8 @@
 const styles = {
   card_container: {
-    width: 350,
+    width: 340,
     height: 400,
-    margin: "50px",
+    margin: "30px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",

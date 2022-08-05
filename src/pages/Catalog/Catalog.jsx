@@ -18,7 +18,7 @@ const Products = () => {
     const token = JSON.parse(localStorage.getItem('token'));
 
     if (!token){
-       return navigate("/shopall/login");
+       return navigate("/login");
     }
     localStorage.removeItem('id');
   },[]);
@@ -31,11 +31,7 @@ const Products = () => {
       <CardCategory filter={{ category, setCategory }} />
       {category ? (
         <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          sx={styles.box_title}
         >
           {category === "jewelery" ? (
             <Typography sx={styles.typography_all}>jewelry</Typography>

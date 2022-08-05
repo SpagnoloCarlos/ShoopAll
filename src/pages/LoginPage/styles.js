@@ -4,11 +4,11 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    height: "calc((100vh - 97px) - 100px)",
+    height: "calc((100vh - 98px) - 100px)",
   },
   box: {
     height: "320px",
-    width: "380px",
+    width: {xs: "70%", sm: "70%", md: "380px", lg: "380px", xl: "380px"},
     margin: "20px",
     backgroundColor: "#ffffff",
     boxShadow: "0 1px 2px 0 rgb(0 0 0 / 25%)",
@@ -37,11 +37,11 @@ const styles = {
   },
   form_username: {
     m: 1,
-    width: "80%",
+    width: {xs: "100%", sm: "90%", md: "80%", lg: "80%", xl: "80%"},
   },
   form_password: {
     m: 1,
-    width: "80%",
+    width: {xs: "100%", sm: "90%", md: "80%", lg: "80%", xl: "80%"},
   },
   error: {
     height: "10px",

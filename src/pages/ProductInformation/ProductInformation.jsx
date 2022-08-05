@@ -17,12 +17,12 @@ const ProductInformation = () => {
     fetchProductData({id, setProductData});
     const token = JSON.parse(localStorage.getItem('token'));
     if (!token){
-       return navigate("/shopall/login");
+       return navigate("/login");
     }
   },[]);
 
   const handleOnClick = () => {
-    navigate("/shopall/catalog");
+    navigate("/catalog");
   }
 
   return (

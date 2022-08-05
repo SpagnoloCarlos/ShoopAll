@@ -1,15 +1,15 @@
 const styles = {
   page: {
     display: "flex",
+    flexWrap: {xs: "wrap", sm: "wrap", md: "noWrap", lg: "noWrap", xl: "noWrap"},
     alignItems: "center",
     justifyContent: "space-around",
     backgroundColor: "transparent",
-    height: "500px",
   },
   container: {
-    width: "350px",
-    height: "450px",
-    margin: "5px",
+    width: {xs: "80%", sm: "20em", md: "20em", lg: "20em", xl: "20em"},
+    height: "auto ",
+    margin: "30px 10px 10px 10px",
     overflow: "hidden",
   },
   image: {

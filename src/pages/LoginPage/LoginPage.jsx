@@ -32,7 +32,7 @@ const LoginPage = () => {
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("token"));
     if (token) {
-      return navigate("/shopall/catalog");
+      return navigate("/catalog");
     }
   }, []);
 
@@ -41,7 +41,7 @@ const LoginPage = () => {
     if (username && password) {
       const response = await login({ userData, setToken, setError });
       if (response) {
-        navigate("/shopall/catalog");
+        navigate("/catalog");
       }
     } else {
       setError(true);

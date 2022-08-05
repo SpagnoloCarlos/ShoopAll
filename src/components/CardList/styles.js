@@ -4,7 +4,7 @@ const styles = {
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    margin: "20px",
+    margin: "0 20px 20px 20px",
   },
   box: {
     height: "calc((100vh - 97px) - 100px)",

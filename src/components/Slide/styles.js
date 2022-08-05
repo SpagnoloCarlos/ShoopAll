@@ -3,33 +3,26 @@ const styles = {
     position: "absolute",
     top: "30%",
     right: "5%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: {xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex",},
   },
   text1: {
     position: "absolute",
     top: "20%",
     right: "5%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: {xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex",},
   },
   text2: {
     position: "absolute",
     top: "20%",
     left: "5%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: {xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex",},
+
   },
   text3: {
     position: "absolute",
     top: "41%",
     left: "10%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: {xs: "none", sm: "none", md: "flex", lg: "flex", xl: "flex",},
   },
   title0: {
     margin: 0,
@@ -61,6 +54,7 @@ const styles = {
   },
   image: {
     width: "100%",
+    height: "100%",
   },
 };
 
