@@ -1,4 +1,7 @@
 const styles = {
+  page: {
+    minHeight: "calc((100vh - 98px) - 100px)",
+  },
   typography: {
     fontFamily: "Permanent Marker",
     fontSize: { xs: "50px", sm: "60px", md: "80px", lg: "80px", xl: "80px" },

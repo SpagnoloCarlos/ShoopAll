@@ -27,26 +27,28 @@ const Products = () => {
     <>
       <Header />
       <Slideshow />
-      <Typography sx={styles.typography}>Categories</Typography>
-      <CardCategory filter={{ category, setCategory }} />
-      {category ? (
-        <Box
-          sx={styles.box_title}
-        >
-          {category === "jewelery" ? (
-            <Typography sx={styles.typography_all}>jewelry</Typography>
-          ) : (
-            <Typography sx={styles.typography_all}>{category}</Typography>
-          )}
-          <Button onClick={() => setCategory("")} sx={styles.button}>
-            Back
-          </Button>
-        </Box>
-      ) : (
-        <Typography sx={styles.typography}>All Products</Typography>
-      )}
+      <Box sx={styles.page}>
+        <Typography sx={styles.typography}>Categories</Typography>
+        <CardCategory filter={{ category, setCategory }} />
+        {category ? (
+          <Box
+            sx={styles.box_title}
+          >
+            {category === "jewelery" ? (
+              <Typography sx={styles.typography_all}>jewelry</Typography>
+            ) : (
+              <Typography sx={styles.typography_all}>{category}</Typography>
+            )}
+            <Button onClick={() => setCategory("")} sx={styles.button}>
+              Back
+            </Button>
+          </Box>
+        ) : (
+          <Typography sx={styles.typography}>All Products</Typography>
+        )}
 
-      <CardList filter={{ category }} />
+        <CardList filter={{ category }} />
+      </Box>
       <Footer />
     </>
   );
