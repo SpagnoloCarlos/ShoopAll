@@ -7,8 +7,8 @@
 - Uses axios for API connections.
 
 ![Login](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/1.png)
-![](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/2.png)
-![](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/3.png)
+![](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/9.png)
+![](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/10.png)
 ![](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/4.png)
 ![](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/5.png)
 ![](https://github.com/SpagnoloCarlos/ShopAll/blob/master/public/6.png)
