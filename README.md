@@ -1,4 +1,4 @@
-# ShopAll
+# ShopAll 🛒
 
 - This page was created with create-react-app.
 - Responsive design.
